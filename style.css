@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --color-primario: #3f0404;
+    --color-secundario:#E68369;
+    --color-terciario:#ECCEAE;
+
+    --fuente-monserat:"Montserrat", sans-serif;
+    --fuente-krona:"Krona One", sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0 0 15%;
+
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente-monserat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+    transition: 0.5s;
+}
+.header__menu__link:hover{
+    color: #f0e4d6;
+    cursor: pointer;
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 6% 15%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo{
+    color: #fff;
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+}
+
+.presentacion__contenido__texto{
+    color: var(--color-secundario);
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.titulo-destacado {
+    color: var(--color-terciario);
+}
+
+.presentacion__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion__enlaces__link {
+    border:2px solid var(--color-terciario);
+    color: var(--color-secundario);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    width: 50%;
+    border-radius: 16px;
+    text-align: center;
+    padding: 21.5px 0;
+    font-family: var(--fuente-monserat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: 1s;
+    img{
+        width: 40px;
+        height: 40px;
+        filter:brightness(100);
+    }
+}
+
+.presentacion__enlaces__link:hover {
+    background-color: #880909;
+}
+
+.juampi{
+    width: 50%;
+    filter: brightness(0.8); /* Ajusta el valor: menos de 1 oscurece la imagen, más de 1 la aclara */
+    box-shadow: 0 0 10px var(--color-secundario);
+    border-radius: 50%;
+}
+
+
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 1.5rem;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-monserat);
+    font-size: 1.5remx;
+    font-weight: 400;
+    a{
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--color-primario);
+        cursor: pointer;
+    }
+}
+
+@media (max-width:1200px) {
+    body{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer{
+        width: 100%;
+    }
+
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido{
+        width: auto;
+    }
+}
+
+/* Media Query para monitor con relación estándar de 19 pulgadas (1280 x 1024) */
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
+    .presentacion__enlaces__link{
+        padding: 10px 0;
+    }
+    .presentacion__contenido__titulo{
+        font-size: 25px;
+    }
+    .presentacion__contenido__texto{
+        font-size: 20px;
+    }
+}
+
+/* Media Query para monitor con relación estándar de 20 pulgadas (1600 x 1200) */
+@media screen and (max-width: 1600px) and (max-height: 1200px) {
+    .presentacion__enlaces__link{
+        padding: 18px 0;
+    }
+    
+    .juampi{
+        width: 40%;
+    }
+}
+
+/* Media Query para monitores panorámicos de 20 y 22 pulgadas (1680 x 1050) */
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
+    .presentacion__enlaces__link{
+        padding: 10px 0;
+    }
+
+    .juampi{
+        width: 40%;
+    }
+}
+
